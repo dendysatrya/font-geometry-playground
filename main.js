@@ -18,7 +18,7 @@ const copyButton = document.getElementById('copyButton');
 
 const GRID_SIZE = 6;
 const CELL_SIZE_PX = 40;
-const SAMPLE_CHAR = 'l';
+const SAMPLE_CHAR = 'M';
 
 /* =========================================================
    INITIALIZATION
