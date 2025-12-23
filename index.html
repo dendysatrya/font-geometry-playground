@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Font Geometry & Character Aspect Ratio Playground</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Font Geometry & Character Aspect Ratio Playground</h1>
+      <p>Measure how font choice and line-height affect monospace character geometry.</p>
+    </header>
+
+    <section class="controls">
+      <div class="control-group">
+        <label for="fontSelect">Font</label>
+        <select id="fontSelect">
+          <option value="monospace">monospace</option>
+          <option value="'Courier New', monospace">Courier New</option>
+          <option value="'Consolas', monospace">Consolas</option>
+          <option value="'Fira Code', monospace">Fira Code</option>
+          <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="lineHeightSlider">
+          Line Height: <span id="lineHeightValue">1.0</span>
+        </label>
+        <input
+          type="range"
+          id="lineHeightSlider"
+          min="0.8"
+          max="1.6"
+          step="0.01"
+          value="1.0"
+        />
+      </div>
+    </section>
+
+    <section class="grids">
+      <div class="grid-panel">
+        <h2>Reference (Perfect Squares)</h2>
+        <div id="referenceGrid" class="grid"></div>
+      </div>
+
+      <div class="grid-panel">
+        <h2>Text Geometry</h2>
+        <div id="textGrid" class="grid"></div>
+      </div>
+    </section>
+
+    <section class="output-section">
+      <div class="result-box">
+        <div class="result-label">Recommended height factor:</div>
+        <div class="result-value" id="heightFactorValue">1.0000</div>
+      </div>
+      <button id="copyButton" class="copy-btn">Copy</button>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
